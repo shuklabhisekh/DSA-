@@ -28,19 +28,19 @@
 //     }
 //   }
 // }
-// // let obj = {};
-// // for (let i = 0; i < array.length; i++) {
-// //   if (obj[array[i]] == undefined) {
-// //     obj[array[i]] = 1;
-// //   } else {
-// //     obj[array[i]] = obj[array[i]] + 1;
-// //   }
-// // }
-// // let newArray = [];
+let obj = {};
+for (let i = 0; i < array.length; i++) {
+  if (obj[array[i]] == undefined) {
+    obj[array[i]] = 1;
+  } else {
+    obj[array[i]] = obj[array[i]] + 1;
+  }
+}
+let newArray = [];
 
-// // for (let x in obj) {
-// //   newArray.push(x);
-// // }
-// // console.log(newArray);
+for (let x in obj) {
+  newArray.push(x);
+}
+console.log(newArray);
 
 // var arr = new Array(5).fill(0).map((function(a,b){return b+1}))
