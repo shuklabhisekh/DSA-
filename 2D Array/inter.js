@@ -43,4 +43,4 @@ for (let x in obj) {
 }
 console.log(newArray);
 
-// var arr = new Array(5).fill(0).map((function(a,b){return b+1}))
+var arr = new Array(5).fill(0).map((function(a,b){return b+1}))
