@@ -29,10 +29,18 @@
         width: 100%;
         top: 100px;
       }
+      #slider {
+        border: 1px solid black;
+
+        height: 400px;
+      }
     </style>
   </head>
   <body>
     <div id="center">first</div>
+    <div id="slider">
+      <img src="" id="sliderImg" alt="" />
+    </div>
     <div id="sec">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
       mollitia reprehenderit quae debitis voluptatum ipsum ab quos dignissimos
@@ -193,7 +201,26 @@
     <div id="third">Third</div>
   </body>
   <script>
-    console.log(name);
-    name = "masai";
+    let arr = [
+      "https://images.unsplash.com/photo-1519374845668-b337957718c1?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3Bhc2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3Bhc2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "https://images.unsplash.com/photo-1467385829985-2b0fb82b5193?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG91dGRvb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "https://images.unsplash.com/photo-1520869309377-88c9274a27c2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIwfHxvdXRkb29yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500",
+    ];
+
+    slide();
+    function slide() {
+      let sliderImage = document.getElementById("sliderImg");
+      for (let i = 0; i < arr.length; i++) {
+        setInterval(() => {
+          console.log(i, "i");
+          sliderImage.src = arr[i];
+          document.getElementById("slider").append(sliderImage);
+        }, 1000);
+        // if (i == arr.length - 1) {
+        //   i = 0;
+        // }
+      }
+    }
   </script>
 </html>
