@@ -9,12 +9,12 @@ ans.push(index[i])
 diff.push(index[i])
   }
   else{
-    for(let j=0;j<diff;j++){
-      let ind=diff[j]
-      for(let k=0;k<ind.length;k++){
-        
-      }
-    }
+    // for(let j=0;j<diff;j++){
+    //   let ind=diff[j]
+    //   for(let k=0;k<ind.length;k++){
+
+    //   }
+    // }
 
   }
 }
