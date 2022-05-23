@@ -212,14 +212,11 @@
     function slide() {
       let sliderImage = document.getElementById("sliderImg");
       for (let i = 0; i < arr.length; i++) {
-        setInterval(() => {
-          console.log(i, "i");
+        setTimeout(() => {
+          // console.log(i, "i");
           sliderImage.src = arr[i];
-          document.getElementById("slider").append(sliderImage);
+          // document.getElementById("slider").append(sliderImage);
         }, 1000);
-        // if (i == arr.length - 1) {
-        //   i = 0;
-        // }
       }
     }
   </script>
