@@ -18,13 +18,18 @@
 //   }
 // }
 
-console.log([]=="")
+// console.log([]=="")
 
-async function store() {
-  let value = await "https://api.icndb.com/jokes/random";
-  console.log("1");
-}
+// async function store() {
+//   let value = await "https://api.icndb.com/jokes/random";
+//   console.log("1");
+// }
 
-function sec() {
-  console.log(2);
-}
+// function sec() {
+//   console.log(a);
+// }
+
+let arr = [1,2,4,9,5,6,7]
+
+console.log(arr.splice(2,4,10)) //4,9,5,6
+console.log(arr)
