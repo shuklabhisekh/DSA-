@@ -18,7 +18,7 @@
 //   }
 // }
 
-console.log(NaN=="")
+console.log([]=="")
 
 async function store() {
   let value = await "https://api.icndb.com/jokes/random";
