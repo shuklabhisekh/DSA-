@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced css</title>
-</head>
-<body>
-  <div>
-    
-  </div>
-</body>
+<html>
+  <title>CSS inline-block</title>
+  <style>
+    body {
+      text-align: center;
+      font-size: 28px;
+    }
+
+    h1 {
+      color: green;
+    }
+  </style>
+
+  <body>
+    <h1>GeeksforGeeks</h1>
+    A Online
+    <div
+      style="
+        display: inline-flex;
+        background-color: yellow;
+        width: auto;
+        height: auto;
+      "
+    >
+      <div style="display: inline; background-color: blue">Computer</div>
+      <div style="display: inline; background-color: orange">Science</div>
+      <div style="display: inline; background-color: cyan">Portal</div>
+    </div>
+    for Geeks
+  </body>
 </html>
