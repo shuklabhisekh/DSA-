@@ -1,36 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <title>CSS inline-block</title>
-  <style>
-    body {
-      text-align: center;
-      font-size: 28px;
-    }
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    h1 {
-      color: green;
-    }
-  </style>
+    <!-- import the webpage's stylesheet -->
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
 
+      .circle {
+        border-radius: 50%;
+        left: calc(50% - 6.25em);
+        top: calc(50% - 12.5em);
+        transform-origin: 50% 12.5em;
+        width: 12.5em;
+        height: 12.5em;
+        position: absolute;
+        box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+      }
+
+      .one,
+      .three {
+        background: rgba(142, 92, 205, 0.75);
+        transition: background 1s ease-in;
+      }
+
+      .two,
+      .four {
+        background: pink;
+      }
+
+      .one {
+        transform: rotateZ(0);
+      }
+
+      .two {
+        transform: rotateZ(90deg);
+      }
+
+      .three {
+        transform: rotateZ(180deg);
+      }
+
+      .four {
+        transform: rotateZ(-90deg);
+      }
+
+      .circle:hover {
+        border: 1px solid black;
+        background: rgba(142, 92, 205, 0.25);
+      }
+    </style>
+    <!-- import the webpage's javascript file -->
+  </head>
   <body>
-    <h1>GeeksforGeeks</h1>
-    A Online
-    <div
-      style="
-        display: inline-flex;
-        background-color: yellow;
-        width: auto;
-        height: auto;
-      "
-    >
-      <div style="display: inline; background-color: blue; order: 2">
-        Computer
-      </div>
-      <div style="display: inline; background-color: orange; order: 3">
-        Science
-      </div>
-      <div style="display: inline; background-color: cyan">Portal</div>
+    <div class="container">
+      <div class="circle one"></div>
+      <div class="circle two"></div>
+      <div class="circle three"></div>
+      <div class="circle four"></div>
     </div>
-    for Geeks
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div
+      class="glitchButton"
+      style="position: fixed; top: 20px; right: 20px"
+    ></div>
+    <script src="https://button.glitch.me/button.js"></script>
   </body>
 </html>
