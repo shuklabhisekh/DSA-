@@ -1,9 +1,9 @@
 // let arr = [ 1, 2, 3, 4 ];
 
-// function subsequence(){
+function subsequence(){
 
-//     let opsize = Math.pow(2,n)
-// }
+    let opsize = Math.pow(2,n)
+}
 
 function printSubsequences(arr, n)
 {
