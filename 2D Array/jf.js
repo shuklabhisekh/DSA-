@@ -167,10 +167,7 @@ function printSubsequences(arr, n)
         for(let j = 0; j < n; j++)
         {
 
-            // Check if jth bit in the counter is set
-            // If set then print jth element from arr[]
             if ((counter & (1 << j)) != 0)
-                // document.write(arr[j] + " ");
                store = store + arr[j] + " "
         }
         console.log(store)
