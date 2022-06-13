@@ -160,10 +160,8 @@ function countChar(callback) {
 function printSubsequences(arr, n)
 {
 
-    // Number of subsequences is (2**n -1)
     let opsize = parseInt(Math.pow(2, n), 10);
 
-    // Run from counter 000..1 to 111..1
     for(let counter = 1; counter < opsize; counter++)
     { let store = ""
         for(let j = 0; j < n; j++)
