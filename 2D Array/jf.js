@@ -168,6 +168,7 @@ function printSubsequences(arr, n)
         {
 
             if ((counter & (1 << j)) != 0)
+                // document.write(arr[j] + " ");
                store = store + arr[j] + " "
         }
         console.log(store)
