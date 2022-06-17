@@ -1,7 +1,6 @@
-let arr  = [-11, -10, -8,  -7]
-let count = arr[0];
 
-
-function hoisting(){
-    
-}
+// let arr= 
+ [1, 2, 3].
+  forEach((element) => {
+    console.log(element * 2);
+  });
