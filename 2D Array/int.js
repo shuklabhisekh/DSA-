@@ -1,7 +1,6 @@
+let arr = [1, 4];
 
-function add(a,b=0,...c){
-    console.log(c)
-    console.log(a+b)
-}
-
-add(4,12,4,2,2,2,2,2,4)
+let ans = arr.map((ele) => {
+  return ele * 2;
+});
+console.log(ans);
