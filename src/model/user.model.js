@@ -19,4 +19,5 @@ UserSchema.pre("save", function (next) {
   return next();
 });
 
+
 module.exports = mongoose.model("user", UserSchema);
