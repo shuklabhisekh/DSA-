@@ -17,14 +17,20 @@ const register = async (req, res) => {
   return res.send({ user, token });
 };
 
-const login = (req, res) => {
-    let user = await User.findOne({ email: req.body.email }).lean().exec();
-    if (!user) {
-      return res.status(400).send({ message: "The email already exist" });
-    }
-    
-  
-  return res.send("Login");
+const login = async (req, res) => {
+  let user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return res.status(400).send({ message: "The email already exist" });
+  }
+
+  const match = user.checkpassword(req.body.password);
+  if (!match) {
+    return res.status(400).send({ message: "The email already exist" });
+  }
+
+  const token = newToken(user);
+
+  return res.send({ user, token });
 };
 
 module.exports = { register, login };
