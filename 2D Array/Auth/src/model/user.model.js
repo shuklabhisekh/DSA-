@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-var bcryptjs = require("bcryptjs");
+var bcrypt = require("bcryptjs");
 const UserSchema = new mongoose.Schema(
   {
     email: { type: String, required: true, unique: true },
@@ -14,13 +14,13 @@ const UserSchema = new mongoose.Schema(
 UserSchema.pre("save", function (next) {
   if (!this.isModified("password")) return next();
 
-  var hash = bcryptjs.hashSync(this.password, 8);
+  const hash = bcrypt.hashSync(this.password, 8);
   this.password = hash;
   return next();
 });
 
-UserSchema.methods.checkpassword = function (password) {
-  return bcryptjs.compareSync(password, this.password);
-};
+UserSchema.methods.checkpassword = function(password){
+  return bcrypt.compareSync(password, this.password);
+}
 
 module.exports = mongoose.model("user", UserSchema);
