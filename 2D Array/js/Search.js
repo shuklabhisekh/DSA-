@@ -8,26 +8,21 @@ let matrix = [
 let target = 19;
 console.log(search());
 function search() {
+  let row = matrix.length;
+  let col = matrix[0].length;
+  let j = col - 1;
   let i = 0;
-  for (let j = matrix[0].length - 1; j >= 0; j--) {
-    console.log(i,j,"out")
-
-    if (i < matrix.length && matrix[i][j] == target) {
-      return true;
-    } else if (i < matrix.length && matrix[i][j] < target) {
-        // console.log(matrix[i][j],"in",target)
-    //   while (i < matrix.length) {
-    //     if (matrix[i][j] == target) {
-    //       return true;
-    //     }
-    //     i++;
-    //   }
-      // return false
+  while(i<row& j>=0){
+    if(matrix[i][j]===target){
+        return true
     }
-    if (j == 0 && i < matrix.length) {
-      j = matrix[0].length;
-      i++;
+    else if(matrix[i][j]<target){
+        i++
+    }
+    else{
+        j--
     }
   }
+
   return false;
 }
