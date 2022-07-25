@@ -5,16 +5,16 @@ let matrix = [
   [16, 17, 18, 19, 20],
   [21, 22, 23, 24, 25],
 ];
+
 let target = 19;
-console.log(search());
 function search() {
-  let row = matrix.length;
-  let col = matrix[0].length;
-  let j = col - 1;
-  let i = 0;
-  while(i<row& j>=0){
-    if(matrix[i][j]===target){
-        return true
+    let row = matrix.length;
+    let col = matrix[0].length;
+    let j = col - 1;
+    let i = 0;
+    while(i<row& j>=0){
+        if(matrix[i][j]===target){
+            return true
     }
     else if(matrix[i][j]<target){
         i++
@@ -22,7 +22,8 @@ function search() {
     else{
         j--
     }
-  }
-
-  return false;
 }
+
+return false;
+}
+console.log(search());
