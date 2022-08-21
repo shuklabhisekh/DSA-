@@ -1,4 +1,4 @@
-let arr = [1, 2, 3];
+let arr = [1, 2, 3,4];
 
 let ans = [];
 let str = "";
